@@ -1,0 +1,6 @@
+demo/
+.venv/
+*.egg-info/
+.idea/
+*.iml
+build/
