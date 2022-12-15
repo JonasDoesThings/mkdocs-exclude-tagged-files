@@ -4,3 +4,4 @@ demo/
 .idea/
 *.iml
 build/
+dist/
