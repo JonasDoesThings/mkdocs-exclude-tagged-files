@@ -14,6 +14,7 @@ setup(
     description='A mkdocs plugin that excludes files based on a list of frontmatter tags from being included in the final mkdocs output.',
     long_description=(this_directory / "README.md").read_text(),
     long_description_content_type='text/markdown',
+    keywords=['mkdocs', 'mkdocs-plugin'],
     install_requires=['mkdocs'],
 
     entry_points={
