@@ -1,7 +1,7 @@
 # MKDocs Exclude Tagged Files
 A simple plugin for excluding files from being included in the mkdocs output based on tags in their frontmatter.
 
-## Instalation
+## Installation
 Run `pip install --upgrade mkdocs-exclude-tagged-files`
 
 ## Configuration
