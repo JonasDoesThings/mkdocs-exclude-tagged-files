@@ -1,6 +1,7 @@
 import typing
 from typing import Optional
 
+from charset_normalizer import from_path
 import frontmatter
 import mkdocs.config
 import mkdocs.config.config_options
@@ -29,11 +30,10 @@ class ExcludeTaggedFilesPlugin(BasePlugin[ExcludeTaggedFilesPluginConfig]):
 
     def on_files(self, files: Files, *, config: MkDocsConfig) -> Optional[Files]:
         for file in files.documentation_pages():
-            with open('./docs/' + file.src_uri, 'r') as raw_file:
-                metadata = frontmatter.load(raw_file).metadata
-
-                if self.is_page_excluded(metadata):
-                    files.remove(file)
+            raw_file = str(from_path('./docs/' + file.src_uri).best())
+            metadata = frontmatter.loads(raw_file).metadata
+            if self.is_page_excluded(metadata):
+                files.remove(file)
 
         return files
 

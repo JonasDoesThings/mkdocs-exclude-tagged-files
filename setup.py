@@ -15,7 +15,7 @@ setup(
     long_description=(this_directory / "README.md").read_text(),
     long_description_content_type='text/markdown',
     keywords=['mkdocs', 'mkdocs-plugin'],
-    install_requires=['mkdocs', 'python-frontmatter'],
+    install_requires=['mkdocs', 'python-frontmatter', 'charset_normalizer'],
 
     entry_points={
         'mkdocs.plugins': [
