@@ -5,7 +5,7 @@ this_directory = Path(__file__).parent
 
 setup(
     name='mkdocs-exclude-tagged-files',
-    version='1.0.3',
+    version='1.0.4',
     packages=['mkdocs_exclude_tagged_files'],
     url='https://github.com/JonasDoesThings/mkdocs-exclude-tagged-files',
     license='MIT',
